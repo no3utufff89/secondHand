@@ -1,6 +1,9 @@
 html{
   box-sizing: border-box;
   --main-color:#272727;
+  --white-text:#fff;
+  --heart-color:#D93162;
+  --goods-item-color:#4D4D4D;
 }
 *,*:before,*:after{
   box-sizing: inherit;
@@ -38,6 +41,9 @@ h1,h2,h3,p{
 .container{
   max-width: 1180px;
   margin: 0 auto;
+}
+.hidden{
+  display: none;
 }
 @media (max-width: 1200px) {
   .container{

@@ -1,0 +1,133 @@
+.item{
+  position: relative;
+}
+.item__img{
+  width: 280px;
+  height: 330px;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 11px;
+}
+.item__favorite-btn{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: var(--white-text);
+  transition: color .4s ease,opacity .4s ease;
+}
+.item__favorite-btn:hover{
+color: var(--heart-color);
+  opacity: .5;
+}
+.item__favorite-btn:focus{
+  color: var(--heart-color);
+
+}
+.item__favorite-btn:active{
+  color: var(--heart-color);
+
+}
+.item__control-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 115px;
+  column-gap: 9px;
+  row-gap: 11px;
+}
+.item__title{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  align-self: center;
+}
+.item__to-cart{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+color: var(--white-text);
+
+  background-color: var(--main-color);
+  padding: 8px;
+  border: 1px solid transparent;
+}
+.item__to-cart:hover{
+  background-color: #464343;
+}
+.item__to-cart:active{
+  border: 1px solid #272727;
+  background-color: var(--white-text);
+  color: var(--main-color);
+}
+.item__to-cart:focus{
+  background-color: #F5F5F5;
+  border: 1px solid #272727;
+  color: var(--main-color);
+}
+.item__price{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--goods-item-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+.item__old-price{
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+}
+.item__old-price:after{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-4.34deg);
+  background-color: var(--heart-color);
+
+}
+.item__description-btn{
+  border: none;
+  background-color: transparent;
+
+ }
+.item__description-text{
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--main-color);
+}
+.item__description-text:hover{
+  color: #464343;
+}
+.item__description-text:active:after{
+  height: 0;
+}
+.item__description-text:after{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom:1px;
+  background-color: var(--main-color);
+}
+@media (max-width:1000px){
+  .goods__list{
+    row-gap: 50px;
+  }
+}
+@media (max-width:580px){
+.goods__list{
+  row-gap: 30px;
+}
+}
